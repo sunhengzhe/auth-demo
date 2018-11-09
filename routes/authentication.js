@@ -53,7 +53,7 @@ router.get('/form-based', function(req, res, next) {
     req.session.views = 1;
   }
 
-  res.send('you have viewed ' + req.session.views + ' times');
+  res.send('you have viewed ' + req.session.views + ' times\n your session:' + JSON.stringify(req.session, '\n', 4));
 });
 
 module.exports = router;
